@@ -382,3 +382,265 @@ To github.com:varma-cephas/gitExercise1-B1.git
 branch 'ft/service-redesign' set up to track 'origin/ft/service-redesign'.
 gymumuco@umucos-iMac-2 gitExercise1-B1 % 
 ```
+
+## Bundle 3
+
+### Exercise 1
+
+```bash
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/team-page
+Switched to a new branch 'ft/team-page'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % touch team.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "add team page and updated content"
+[ft/team-page be59dc0] add team page and updated content
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/team-page
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 632 bytes | 632.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/team-page' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/team-page
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/team-page -> ft/team-page
+branch 'ft/team-page' set up to track 'origin/ft/team-page'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout main
+Switched to branch 'main'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/contact-page
+Switched to a new branch 'ft/contact-page'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout ft/team-page
+Switched to branch 'ft/team-page'
+Your branch is up to date with 'origin/ft/team-page'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git log
+commit be59dc041a34ec3b30c6603966bc7a2bc3254d27 (HEAD -> ft/team-page, origin/ft/team-page)
+Author: varmac <varmac231@gmail.com>
+Date:   Wed Dec 18 11:24:02 2024 +0200
+
+    add team page and updated content
+
+commit 15514a21cd3730a9383ba86cd380e39230278f80 (ft/service-redesign)
+Merge: febc6fb 4b8164b
+Author: varmac <varmac231@gmail.com>
+Date:   Wed Dec 18 11:17:51 2024 +0200
+
+    Merge branch 'main' of github.com:varma-cephas/gitExercise1-B1 into ft/service-redesign
+    this branch is behind the main one, that's the reason the merge is necessay
+
+commit 4b8164b895063e78255928fde2a6ccacdf526220 (origin/main, main, ft/contact-page)
+Author: varmac <varmac231@gmail.com>
+Date:   Wed Dec 18 11:13:33 2024 +0200
+
+    remove team.html
+
+commit febc6fb2f2680c6e332b2466fc1ec6b45319c8e8 (origin/ft/service-redesign)
+Merge: 6539137 044e5de
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 15:04:15 2024 +0200
+
+    resolved merge conflict on services file
+
+commit 044e5de71e04929ce44502a88c58459c214f9b40
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 14:39:59 2024 +0200
+
+    updated our services with the new stock products, we should be more profitable at this point
+
+commit 6539137bdc3c31786063e1afa947366d5b48b689
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 14:00:27 2024 +0200
+
+    updated our services page with more recent content
+
+commit 583a938e9443f1fa9f7ea2f6568fa28af79ee825
+Merge: 22b77ec 770d37e
+Author: Varma Cephas <varmac231@gmail.com>
+Date:   Tue Dec 17 13:49:46 2024 +0200
+
+    Merge pull request #1 from varma-cephas/ft/bundle-2
+    
+    Ft/bundle 2
+
+commit 770d37ea5cfa26616c933e48b43c54102bd636b2 (origin/ft/bundle-2, ft/bundle-2)
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 13:38:52 2024 +0200
+
+    made changes in home, about and services files
+
+commit bbdeae5585b3150210708acdf313f45dc6c77dcf (origin/dev, dev)
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 12:33:38 2024 +0200
+
+    added home and about html files
+
+commit 22b77ec260b5634879dc05a2ee9566ac00aba6b6
+Author: varmac <varmac231@gmail.com>
+Date:   Tue Dec 17 11:06:56 2024 +0200
+
+    change branch name from master to main. create readme file
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout ft/contact-page
+Switched to branch 'ft/contact-page'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git cherry-pick be59dc041a34ec3b30c6603966bc7a2bc3254d27
+[ft/contact-page 5305143] add team page and updated content
+ Date: Wed Dec 18 11:24:02 2024 +0200
+ 1 file changed, 14 insertions(+)
+ create mode 100644 team.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "updated our team page with descriptive content about how big our team is"
+[ft/contact-page 6c1a00d] updated our team page with descriptive content about how big our team is
+ 1 file changed, 5 insertions(+)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/contact-page
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 750 bytes | 750.00 KiB/s, done.
+Total 6 (delta 3), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (3/3), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/contact-page' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/contact-page
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/contact-page -> ft/contact-page
+branch 'ft/contact-page' set up to track 'origin/ft/contact-page'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/faq-page
+Switched to a new branch 'ft/faq-page'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % touch faq.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "add our frequently asked questions page and added some content."
+[ft/faq-page b1c0cb8] add our frequently asked questions page and added some content.
+ 1 file changed, 21 insertions(+)
+ create mode 100644 faq.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/faq-page
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 522 bytes | 522.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/faq-page' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/faq-page
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git revert be59dc041a34ec3b30c6603966bc7a2bc3254d27
+CONFLICT (modify/delete): team.html deleted in parent of be59dc0 (add team page and updated content) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert be59dc0... add team page and updated content
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git revert be59dc041a34ec3b30c6603966bc7a2bc3254d27
+CONFLICT (modify/delete): team.html deleted in parent of be59dc0 (add team page and updated content) and modified in HEAD.  Version HEAD of team.html left in tree.
+error: could not revert be59dc0... add team page and updated content
+hint: After resolving the conflicts, mark them with
+hint: "git add/rm <pathspec>", then run
+hint: "git revert --continue".
+hint: You can instead skip this commit with "git revert --skip".
+hint: To abort and get back to the state before "git revert",
+hint: run "git revert --abort".
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "removed the extra content added to our team page content and cleaned up file"
+[ft/faq-page 3504830] removed the extra content added to our team page content and cleaned up file
+ 1 file changed, 5 deletions(-)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/faq-page
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 316 bytes | 316.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+To github.com:varma-cephas/gitExercise1-B1.git
+   b1c0cb8..3504830  ft/faq-page -> ft/faq-page
+branch 'ft/faq-page' set up to track 'origin/ft/faq-page'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push  origin ft/faq-page 
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Everything up-to-date
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+```
+
+### Exercise 2
+
+```bash
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/home-page-redesign
+Switched to a new branch 'ft/home-page-redesign'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout main
+Switched to branch 'main'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .               
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "updated about home and service page with additional content"
+[main c392330] updated about home and service page with additional content
+ 3 files changed, 23 insertions(+)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push origin main
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 9, done.
+Counting objects: 100% (9/9), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (5/5), done.
+Writing objects: 100% (5/5), 861 bytes | 861.00 KiB/s, done.
+Total 5 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+To github.com:varma-cephas/gitExercise1-B1.git
+   4b8164b..c392330  main -> main
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout ft/home-page-redesign
+Switched to branch 'ft/home-page-redesign'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git rebase main
+Successfully rebased and updated refs/heads/ft/home-page-redesign.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "updated our home page with some content about the maintenance about our page"
+[ft/home-page-redesign 72fba28] updated our home page with some content about the maintenance about our page
+ 1 file changed, 3 insertions(+)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push origin ft/ 
+fatal: invalid refspec 'ft/'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push origin ft/
+fatal: invalid refspec 'ft/'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/home-page-redesign
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (14/14), done.
+Writing objects: 100% (14/14), 1.90 KiB | 1.90 MiB/s, done.
+Total 14 (delta 6), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (6/6), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/home-page-redesign' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/home-page-redesign
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/home-page-redesign -> ft/home-page-redesign
+branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+```
