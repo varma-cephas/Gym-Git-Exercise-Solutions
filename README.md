@@ -644,3 +644,126 @@ To github.com:varma-cephas/gitExercise1-B1.git
 branch 'ft/home-page-redesign' set up to track 'origin/ft/home-page-redesign'.
 gymumuco@umucos-iMac-2 gitExercise1-B1 % 
 ```
+
+##  Bundle 4
+
+### Exercise 1
+
+```bash
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout main
+Switched to branch 'main'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git remote -v
+origin	git@github.com:varma-cephas/gitExercise1-B1.git (fetch)
+origin	git@github.com:varma-cephas/gitExercise1-B1.git (push)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git remote add git-copy git@github.com:varma-cephas/gitExercise-B4.git
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git remote -v
+git-copy	git@github.com:varma-cephas/gitExercise-B4.git (fetch)
+git-copy	git@github.com:varma-cephas/gitExercise-B4.git (push)
+origin	git@github.com:varma-cephas/gitExercise1-B1.git (fetch)
+origin	git@github.com:varma-cephas/gitExercise1-B1.git (push)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .                  
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "updated our home page with our annual earning for the year 2024" 
+[main f0b1f62] updated our home page with our annual earning for the year 2024
+ 1 file changed, 2 insertions(+), 11 deletions(-)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push origin main
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 655 bytes | 655.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+To github.com:varma-cephas/gitExercise1-B1.git
+   c392330..f0b1f62  main -> main
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push git-copy main
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 27, done.
+Counting objects: 100% (27/27), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (25/25), done.
+Writing objects: 100% (27/27), 3.97 KiB | 3.97 MiB/s, done.
+Total 27 (delta 10), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (10/10), done.
+To github.com:varma-cephas/gitExercise-B4.git
+ * [new branch]      main -> main
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+```
+
+### Exercise 2
+```bash
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/footer
+Switched to a new branch 'ft/footer'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % touch footer.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "add footer page and made changes to the rest of our page content" 
+[ft/footer 33ac20c] add footer page and made changes to the rest of our page content
+ 4 files changed, 15 insertions(+)
+ create mode 100644 footer.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "udpdate our home, about, services, and about with new content about the new services and important dates"
+[ft/footer 4704697] udpdate our home, about, services, and about with new content about the new services and important dates
+ 4 files changed, 38 insertions(+)
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/footer
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 16, done.
+Counting objects: 100% (16/16), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (12/12), done.
+Writing objects: 100% (12/12), 2.10 KiB | 2.10 MiB/s, done.
+Total 12 (delta 5), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (5/5), done.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/footer' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/footer
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/footer -> ft/footer
+branch 'ft/footer' set up to track 'origin/ft/footer'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout main
+Switched to branch 'main'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/squashing
+Switched to a new branch 'ft/squashing'
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git merge --squash ft/footer
+Updating f0b1f62..4704697
+Fast-forward
+Squash commit -- not updating HEAD
+ about.html    | 10 ++++++++++
+ footer.html   | 18 ++++++++++++++++++
+ home.html     |  8 ++++++++
+ services.html | 17 +++++++++++++++++
+ 4 files changed, 53 insertions(+)
+ create mode 100644 footer.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git add .
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git commit -m "footer changes squashing was amazing to see"
+[ft/squashing cfb71f4] footer changes squashing was amazing to see
+ 4 files changed, 53 insertions(+)
+ create mode 100644 footer.html
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push [-
+zsh: bad pattern: [-
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+gymumuco@umucos-iMac-2 gitExercise1-B1 % git push --set-upstream origin ft/squashing
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (6/6), done.
+Writing objects: 100% (6/6), 1.59 KiB | 1.59 MiB/s, done.
+Total 6 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), done.
+remote: This repository moved. Please use the new location:
+remote:   git@github.com:varma-cephas/gitExercises.git
+remote: 
+remote: Create a pull request for 'ft/squashing' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/gitExercises/pull/new/ft/squashing
+remote: 
+To github.com:varma-cephas/gitExercise1-B1.git
+ * [new branch]      ft/squashing -> ft/squashing
+branch 'ft/squashing' set up to track 'origin/ft/squashing'.
+gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+```
