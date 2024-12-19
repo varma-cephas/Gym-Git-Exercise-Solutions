@@ -804,3 +804,125 @@ remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
 To github.com:varma-cephas/git-cafe-exercise.git
    d1d3f9c..99d11c5  main -> main
 ```
+
+## Bundle 6
+
+### Exercise 1
+
+```bash
+gymumuco@umucos-iMac-2 git-cafe-exercise % git checkout -b ft/menu-page
+Switched to a new branch 'ft/menu-page'
+gymumuco@umucos-iMac-2 git-cafe-exercise % touch menu.html
+gymumuco@umucos-iMac-2 git-cafe-exercise % git add .
+gymumuco@umucos-iMac-2 git-cafe-exercise % git commit -m "added new menu page and changes related"
+[ft/menu-page 9577fc6] added new menu page and changes related
+ 1 file changed, 63 insertions(+)
+ create mode 100644 menu.html
+gymumuco@umucos-iMac-2 git-cafe-exercise % git push --set-upstream origin ft/menu-page
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 4, done.
+Counting objects: 100% (4/4), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 835 bytes | 835.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'ft/menu-page' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/git-cafe-exercise/pull/new/ft/menu-page
+remote: 
+To github.com:varma-cephas/git-cafe-exercise.git
+ * [new branch]      ft/menu-page -> ft/menu-page
+branch 'ft/menu-page' set up to track 'origin/ft/menu-page'.
+gymumuco@umucos-iMac-2 git-cafe-exercise % 
+```
+
+### Exercise 2
+
+```bash
+gymumuco@umucos-iMac-2 git-cafe-exercise % git checkout -b bugfix/change-title
+Switched to a new branch 'bugfix/change-title'
+gymumuco@umucos-iMac-2 git-cafe-exercise % mv index-4.html git status
+mv: status is not a directory
+gymumuco@umucos-iMac-2 git-cafe-exercise % git status
+On branch bugfix/change-title
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gymumuco@umucos-iMac-2 git-cafe-exercise % git add .
+gymumuco@umucos-iMac-2 git-cafe-exercise % git commit -m "changed title for index-4.html file to Contact"
+[bugfix/change-title f657e18] changed title for index-4.html file to Contact
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymumuco@umucos-iMac-2 git-cafe-exercise % git push --set-upstream origin bugfix/change-title
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'bugfix/change-title' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/git-cafe-exercise/pull/new/bugfix/change-title
+remote: 
+To github.com:varma-cephas/git-cafe-exercise.git
+ * [new branch]      bugfix/change-title -> bugfix/change-title
+branch 'bugfix/change-title' set up to track 'origin/bugfix/change-title'.
+gymumuco@umucos-iMac-2 git-cafe-exercise % git push --set-upstream origin bugfix/change-title
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 315 bytes | 315.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'bugfix/change-title' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/git-cafe-exercise/pull/new/bugfix/change-title
+remote: 
+To github.com:varma-cephas/git-cafe-exercise.git
+ * [new branch]      bugfix/change-title -> bugfix/change-title
+branch 'bugfix/change-title' set up to track 'origin/bugfix/change-title'.
+gymumuco@umucos-iMac-2 git-cafe-exercise % 
+```
+
+### Exercise 3
+
+```bash
+gymumuco@umucos-iMac-2 git-cafe-exercise % git checkout -b hotfix/change-tel
+Switched to a new branch 'hotfix/change-tel'
+gymumuco@umucos-iMac-2 git-cafe-exercise % git status
+On branch hotfix/change-tel
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   index-4.html
+
+no changes added to commit (use "git add" and/or "git commit -a")
+gymumuco@umucos-iMac-2 git-cafe-exercise % git add .
+gymumuco@umucos-iMac-2 git-cafe-exercise % git commit -m "change telephone number in index-4.html page to a new one"
+[hotfix/change-tel ed73e8b] change telephone number in index-4.html page to a new one
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymumuco@umucos-iMac-2 git-cafe-exercise % git push --set-upstream origin hotfix/change-tel
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 317 bytes | 317.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+remote: 
+remote: Create a pull request for 'hotfix/change-tel' on GitHub by visiting:
+remote:      https://github.com/varma-cephas/git-cafe-exercise/pull/new/hotfix/change-tel
+remote: 
+To github.com:varma-cephas/git-cafe-exercise.git
+ * [new branch]      hotfix/change-tel -> hotfix/change-tel
+branch 'hotfix/change-tel' set up to track 'origin/hotfix/change-tel'.
+gymumuco@umucos-iMac-2 git-cafe-exercise % 
+```
