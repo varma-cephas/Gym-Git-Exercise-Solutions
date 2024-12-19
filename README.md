@@ -694,6 +694,7 @@ gymumuco@umucos-iMac-2 gitExercise1-B1 %
 ```
 
 ### Exercise 2
+
 ```bash
 gymumuco@umucos-iMac-2 gitExercise1-B1 % git checkout -b ft/footer
 Switched to a new branch 'ft/footer'
@@ -766,4 +767,40 @@ To github.com:varma-cephas/gitExercise1-B1.git
  * [new branch]      ft/squashing -> ft/squashing
 branch 'ft/squashing' set up to track 'origin/ft/squashing'.
 gymumuco@umucos-iMac-2 gitExercise1-B1 % 
+```
+
+## Bundle 5
+
+### Exercise 2
+
+```bash
+gymumuco@umucos-iMac-2 dec2024 % git clone git@github.com:varma-cephas/git-cafe-exercise.git
+Cloning into 'git-cafe-exercise'...
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+remote: Enumerating objects: 107, done.
+remote: Counting objects: 100% (15/15), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 107 (delta 5), reused 4 (delta 4), pack-reused 92 (from 1)
+Receiving objects: 100% (107/107), 1.95 MiB | 510.00 KiB/s, done.
+Resolving deltas: 100% (5/5), done.
+gymumuco@umucos-iMac-2 dec2024 % cd git-cafe-exercise 
+gymumuco@umucos-iMac-2 git-cafe-exercise % 
+gymumuco@umucos-iMac-2 git-cafe-exercise % git remote -v
+origin	git@github.com:varma-cephas/git-cafe-exercise.git (fetch)
+origin	git@github.com:varma-cephas/git-cafe-exercise.git (push)
+gymumuco@umucos-iMac-2 git-cafe-exercise % git add .
+gymumuco@umucos-iMac-2 git-cafe-exercise % git commit -m "changed text in index file from our place to restaurant"
+[main 99d11c5] changed text in index file from our place to restaurant
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+gymumuco@umucos-iMac-2 git-cafe-exercise % git push origin main
+Enter passphrase for key '/Users/gymumuco/.ssh/id_rsa': 
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 339 bytes | 339.00 KiB/s, done.
+Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To github.com:varma-cephas/git-cafe-exercise.git
+   d1d3f9c..99d11c5  main -> main
 ```
